@@ -1,6 +1,7 @@
-package fout;
+package fout.annoation;
 
-import log.IOColor;
+
+import fout.base.FoutColumn;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -9,9 +10,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface FormatOp {
-	String name() default "";
-	FormatOpGravity gravity() default FormatOpGravity.CENTER;
-	int color() default 30;
+public @interface FormatOpSubColumn {
+	String columnName();
+	Class<? extends FoutColumn> cls();
 }
-

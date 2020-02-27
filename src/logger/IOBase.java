@@ -1,4 +1,4 @@
-package log;
+package logger;
 
 public abstract class IOBase {
 	public abstract void println();
